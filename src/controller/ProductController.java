@@ -1,12 +1,20 @@
 package controller;
 
 import entity.Product;
+import repository.ProductRepository;
 import repository.ProductRepositoryImpl;
 import service.ProductService;
 
 import java.util.Set;
 
 public class ProductController {
+
+    private ProductRepository productRepository;
+
+    public ProductController(ProductRepository productRepository){
+        this.productRepository = productRepository;
+    }
+
     ProductService productService = new ProductService(new ProductRepositoryImpl());
     public ProductController() {
 
