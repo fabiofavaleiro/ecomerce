@@ -9,12 +9,12 @@ import java.util.Set;
 
 public class ProductController {
 
-    private ProductRepository productRepository;
-
+    private ProductRepository productRepository = new ProductRepositoryImpl();
 
     public ProductController(ProductRepository productRepository){
         this.productRepository = productRepository;
     }
+
     ProductService productService = new ProductService(productRepository);
 
 

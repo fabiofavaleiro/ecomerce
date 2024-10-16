@@ -16,6 +16,7 @@ public class Main {
     public static void main(String[] args) {
 
 
+
         Scanner scanner = new Scanner(System.in);
         Product product;
         ProductController productController = new ProductController(new ProductRepositoryImpl());
@@ -33,6 +34,7 @@ public class Main {
             System.out.println("6. Sair");
             opcao = scanner.nextInt();
             scanner.nextLine(); // Limpar o buffer do scanner
+
             switch (opcao) {
                 case 1:
                     listaProduct = productController.getProducts();
@@ -50,8 +52,8 @@ public class Main {
                     break;
                 case 3:
 
-                    productController = new ProductController(new ProductRepositoryImpl());
                     product = new Product();
+
                     product.setId(Integer.parseInt(JOptionPane.showInputDialog("Qual é o ID do Produto?")));
                     product.setCompanyId(1);
                     product.setCodeId(1);
@@ -63,9 +65,11 @@ public class Main {
                     product.setCreationDate(new Date(2021-01-03));
                     productController.addProduct(product);
 
+
+
                     break;
                 case 4:
-                    int id4 = Integer.parseInt(JOptionPane.showInputDialog("Qual é o ID do produto que deseja remover?"));
+                    int id4 = Integer.parseInt(JOptionPane.showInputDialog("Qual é o ID do produto que deseja Atualizar?"));
                     product = new Product();
                     product.setId(Integer.parseInt(JOptionPane.showInputDialog("Qual é o ID do novo Produto?")));
                     product.setCompanyId(Integer.parseInt(JOptionPane.showInputDialog("Qual é o ID da Companhia?")));
@@ -75,7 +79,7 @@ public class Main {
                     product.setProductType(JOptionPane.showInputDialog("Qual é o tipo do produto?"));
                     product.setProductDescription(JOptionPane.showInputDialog("Qual é a descrição do produto?"));
                     product.setProductImage(JOptionPane.showInputDialog("Qual é a o caminho da imagem do produto"));
-                    product.setCreationDate(new Date(JOptionPane.showInputDialog("Qual é a data do produto no padrão yyyy-MM-dd?")));
+                    product.setCreationDate(new Date(JOptionPane.showInputDialog("2021-03-03")));
                     productController.updateProduct(id4,product);
 
                     break;
