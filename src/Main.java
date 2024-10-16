@@ -15,41 +15,13 @@ import java.util.Set;
 public class Main {
     public static void main(String[] args) {
 
+
         Scanner scanner = new Scanner(System.in);
-        Product product = new Product();
-        ProductRepository productRepository = new ProductRepositoryImpl();
-        ProductService productService = new ProductService(new ProductRepositoryImpl());
-        ProductController productController = new ProductController();
+        Product product;
+        ProductController productController = new ProductController(new ProductRepositoryImpl());
         Set<Product> listaProduct;
 
-
-
-
-
-        product.setId(1);
-        product.setCompanyId(1);
-        product.setCodeId(1);
-        product.setProductName("nome do produto");
-        product.setValue(3.30);
-        product.setProductType("tipo do produto");
-        product.setProductDescription("muito bom");
-        product.setProductImage("c:");
-        product.setCreationDate(new Date(2024-05-06));
-        productController.addProduct(product);
-        product = new Product();
-        product.setId(2);
-        productController.addProduct(product);
-        product = new Product();
-        product.setId(3);
-        productController.addProduct(product);
-        product = new Product();
-        product.setId(4);
-        productController.addProduct(product);
-
-
         int opcao = 0;
-
-
 
         while (opcao != 6) {
             System.out.println("Escolha uma opção:");
@@ -77,24 +49,40 @@ public class Main {
 
                     break;
                 case 3:
+
+                    productController = new ProductController(new ProductRepositoryImpl());
                     product = new Product();
                     product.setId(Integer.parseInt(JOptionPane.showInputDialog("Qual é o ID do Produto?")));
+                    product.setCompanyId(1);
+                    product.setCodeId(1);
+                    product.setProductName("nome");
+                    product.setValue(3.30);
+                    product.setProductType("produto");
+                    product.setProductDescription("descição");
+                    product.setProductImage("c:");
+                    product.setCreationDate(new Date(2021-01-03));
+                    productController.addProduct(product);
+
+                    break;
+                case 4:
+                    int id4 = Integer.parseInt(JOptionPane.showInputDialog("Qual é o ID do produto que deseja remover?"));
+                    product = new Product();
+                    product.setId(Integer.parseInt(JOptionPane.showInputDialog("Qual é o ID do novo Produto?")));
                     product.setCompanyId(Integer.parseInt(JOptionPane.showInputDialog("Qual é o ID da Companhia?")));
                     product.setCodeId(Integer.parseInt(JOptionPane.showInputDialog("Qual é o ID do codigo?")));
                     product.setProductName(JOptionPane.showInputDialog("Qual é o nome do Produto?"));
                     product.setValue(Double.valueOf(JOptionPane.showInputDialog("Qual é o valor do produto?")));
                     product.setProductType(JOptionPane.showInputDialog("Qual é o tipo do produto?"));
                     product.setProductDescription(JOptionPane.showInputDialog("Qual é a descrição do produto?"));
-                    product.setProductImage("c:");
-                    product.setCreationDate(new Date(2024-05-06));
-                    productController.addProduct(product);
+                    product.setProductImage(JOptionPane.showInputDialog("Qual é a o caminho da imagem do produto"));
+                    product.setCreationDate(new Date(JOptionPane.showInputDialog("Qual é a data do produto no padrão yyyy-MM-dd?")));
+                    productController.updateProduct(id4,product);
 
                     break;
-                case 4:
-                    // Pedir as informações do produto a ser atualizado e chamar o método updateProduct(product) da classe ProductController
-                    break;
                 case 5:
-// Pedir o id do produto que quer remover e chamar o metodo apropriado do controle
+                    int id5 = Integer.parseInt(JOptionPane.showInputDialog("Qual é o ID do produto que deseja remover?"));
+                    productController.deleteProduct(id5);
+
                     break;
                 case 6:
                     System.out.println("Saindo do programa...");
@@ -114,3 +102,13 @@ public class Main {
 
 
 }
+
+                  /*  product.setId(Integer.parseInt(JOptionPane.showInputDialog("Qual é o ID do Produto?")));
+        product.setCompanyId(Integer.parseInt(JOptionPane.showInputDialog("Qual é o ID da Companhia?")));
+        product.setCodeId(Integer.parseInt(JOptionPane.showInputDialog("Qual é o ID do codigo?")));
+        product.setProductName(JOptionPane.showInputDialog("Qual é o nome do Produto?"));
+        product.setValue(Double.valueOf(JOptionPane.showInputDialog("Qual é o valor do produto?")));
+        product.setProductType(JOptionPane.showInputDialog("Qual é o tipo do produto?"));
+        product.setProductDescription(JOptionPane.showInputDialog("Qual é a descrição do produto?"));
+        product.setProductImage(JOptionPane.showInputDialog("Qual é a o caminho da imagem do produto"));
+        product.setCreationDate(new Date(JOptionPane.showInputDialog("Qual é a data do produto no padrão yyyy-MM-dd?")));*/

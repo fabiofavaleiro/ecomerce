@@ -2,13 +2,16 @@ package service;
 
 import entity.Product;
 import repository.ProductRepository;
+import repository.ProductRepositoryImpl;
 
 import java.util.Set;
 
 public class ProductService {
     private ProductRepository productRepository;
 
-    public ProductService(ProductRepository productRepository){
+
+
+    public ProductService(ProductRepository productRepository) {
         this.productRepository = productRepository;
     }
 
@@ -21,6 +24,7 @@ public class ProductService {
     }
 
     public void save(Product product) {
+
         productRepository.save(product);
     }
 

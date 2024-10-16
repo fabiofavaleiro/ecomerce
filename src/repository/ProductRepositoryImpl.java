@@ -10,6 +10,8 @@ public class ProductRepositoryImpl implements ProductRepository{
     protected  Set<Product> listProduct = new HashSet<>();
     protected Product product = new Product();
 
+    public ProductRepositoryImpl() {    }
+
     @Override
     public Product findById(int id) {
         for (Product product1: listProduct){

@@ -11,14 +11,12 @@ public class ProductController {
 
     private ProductRepository productRepository;
 
+
     public ProductController(ProductRepository productRepository){
         this.productRepository = productRepository;
     }
+    ProductService productService = new ProductService(productRepository);
 
-    ProductService productService = new ProductService(new ProductRepositoryImpl());
-    public ProductController() {
-
-    }
 
     public void deleteProduct(int id) {
         productService.delete(id);
@@ -29,6 +27,7 @@ public class ProductController {
     }
 
     public void addProduct(Product product) {
+
         productService.save(product);
     }
 
