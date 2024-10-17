@@ -1,12 +1,9 @@
 import controller.ProductController;
 import entity.Product;
-import repository.ProductRepository;
 import repository.ProductRepositoryImpl;
 import service.ProductService;
-
 import javax.swing.*;
 import java.util.Date;
-import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
 

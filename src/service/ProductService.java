@@ -18,15 +18,24 @@ public class ProductService {
 
 
     public void delete(int id) {
-        productRepository.delete(id);
+        if(productRepository.exisThisID(id)){
+            productRepository.delete(id);
+        }else {
+            messageIdNoencontred();
+        }
+
     }
 
     public void update(int id, Product product) {
-        productRepository.update(id, product);
+
+        if(productRepository.exisThisID(id)){
+            productRepository.update(id, product);
+        }else {
+            messageIdNoencontred();
+        }
     }
 
     public void save(Product product) {
-
         productRepository.save(product);
     }
 
@@ -35,7 +44,18 @@ public class ProductService {
     }
 
     public Product findById(int id) {
-        return productRepository.findById(id);
+        if (productRepository.findById(id)==null){
+            messageIdNoencontred();
+            return null;
+        }else {
+            return productRepository.findById(id);
+        }
     }
+
+    private void messageIdNoencontred(){
+        System.out.println("Seu imbecil, o ID que vc digitou não existe na lista. Quer que eu ligue no manicombio?");
+    }
+
+
 }
 
