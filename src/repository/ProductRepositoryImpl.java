@@ -14,23 +14,15 @@ public class ProductRepositoryImpl implements ProductRepository{
 
     @Override
     public Product findById(int id) {
-        boolean exist;
-        for (Product product1: listProduct){
-            if (product1.getId() == id){
-                return product1;
-            }else {
-                messageIdNoencontred();
+
+        if (exisThisID(id)){
+            for (Product product1: listProduct){
+                if (product1.getId() == id){
+                    return product1;
+                }
             }
         }
-
-
-        for (Product product1: listProduct){
-            if (product1.getId() == id){
-                return product1;
-            }else {
-                messageIdNoencontred();
-            }
-        }
+        messageIdNoencontred();
         return null;
     }
 
@@ -41,43 +33,45 @@ public class ProductRepositoryImpl implements ProductRepository{
 
     @Override
     public void save(Product product) {
-
         listProduct.add(product);
-
     }
 
     @Override
     public void update(int id, Product product) {
-        for (Product productFor : listProduct){
-            if (productFor.getId() == id){
-                listProduct.remove(productFor);
-                listProduct.add(product);
-                break;
-            }else {
-                messageIdNoencontred();
-            }
-
+        if (exisThisID(id)){
+            delete(id);
+            listProduct.add(product);
+        }else {
+            messageIdNoencontred();
         }
-
     }
 
     @Override
     public void delete(int id) {
-        for (Product product1 : listProduct){
-            if (product1.getId() == id){
-                listProduct.remove(product1);
-                break;
-            }else {
-                messageIdNoencontred();
+        if (exisThisID(id)){
+            for (Product product1 : listProduct){
+                if (product1.getId() == id){
+                    listProduct.remove(product1);
+                    break;
+                }
             }
+        }else {
+            messageIdNoencontred();
         }
-
-
     }
 
     private void messageIdNoencontred(){
-        System.out.println("Seu imbecil, o ID que vc digitou não existe na lsita. Quer que eu ligue no manicombio?");
+        System.out.println("Seu imbecil, o ID que vc digitou não existe na lista. Quer que eu ligue no manicombio?");
     }
 
+    private boolean exisThisID(int id){
+        boolean exist = false;
+        for (Product product1: listProduct){
+            if (product1.getId() == id){
+                exist = true;
+            }
+        }
+        return exist;
+    }
 
 }
