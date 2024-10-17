@@ -34,7 +34,7 @@ public class ProductService {
             Product product = findById(id);
             product.setProductName(nameProduct);
             product.setValue(valueProduct);
-            //productRepository.update(id, product); >>> essa fezes estava atrapalhando tudo.
+            productRepository.update(id, product);
 
 
         }else {
@@ -60,7 +60,7 @@ public class ProductService {
     }
 
     private void messageIdNoencontred(){
-        System.out.println("Seu imbecil, o ID que vc digitou não existe na lista. Quer que eu ligue no manicombio?");
+        System.out.println("Caro usuário, o ID que vc digitou não existe na lista. ");
     }
 
 

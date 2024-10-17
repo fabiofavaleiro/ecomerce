@@ -15,7 +15,14 @@ public class ProductRepositoryImpl implements ProductRepository{
     public Product findById(int id) {
             for (Product product1: listProduct){
                 if (product1.getId() == id){
-                    return product1;
+                    Product product= new Product();
+
+                    product.setId(product1.getId());
+
+
+
+
+                    return product;
                 }
             }
             return null;

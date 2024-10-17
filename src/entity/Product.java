@@ -95,12 +95,12 @@ public class Product {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Product product = (Product) o;
-        return id == product.id && companyId == product.companyId && codeId == product.codeId && Double.compare(value, product.value) == 0 && Objects.equals(productName, product.productName) && Objects.equals(productType, product.productType) && Objects.equals(productDescription, product.productDescription) && Objects.equals(productImage, product.productImage) && Objects.equals(creationDate, product.creationDate);
+        return getId() == product.getId() && getCompanyId() == product.getCompanyId() && getCodeId() == product.getCodeId();
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, companyId, codeId, productName, value, productType, productDescription, productImage, creationDate);
+        return Objects.hash(getId(), getCompanyId(), getCodeId());
     }
 
     @Override
