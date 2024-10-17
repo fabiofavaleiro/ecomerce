@@ -79,7 +79,7 @@ public class Main {
                     product.setProductType(JOptionPane.showInputDialog("Qual é o tipo do produto?"));
                     product.setProductDescription(JOptionPane.showInputDialog("Qual é a descrição do produto?"));
                     product.setProductImage(JOptionPane.showInputDialog("Qual é a o caminho da imagem do produto"));
-                    product.setCreationDate(new Date(JOptionPane.showInputDialog("2021-03-03")));
+                    product.setCreationDate(new Date(2021-01-03));
                     productController.updateProduct(id4,product);
 
                     break;
