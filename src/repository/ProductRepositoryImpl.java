@@ -8,7 +8,6 @@ import java.util.Set;
 public class ProductRepositoryImpl implements ProductRepository{
 
     protected  Set<Product> listProduct = new HashSet<>();
-    protected Product product = new Product();
 
     public ProductRepositoryImpl() {    }
 

@@ -19,7 +19,7 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
         Product product;
-        ProductController productController = new ProductController(new ProductRepositoryImpl());
+        ProductController productController = new ProductController(new ProductService(new ProductRepositoryImpl()));
         Set<Product> listaProduct;
 
         int opcao = 0;

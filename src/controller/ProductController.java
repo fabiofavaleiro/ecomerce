@@ -9,33 +9,31 @@ import java.util.Set;
 
 public class ProductController {
 
-    private ProductRepository productRepository = new ProductRepositoryImpl();
+ProductService productService;
 
-    public ProductController(ProductRepository productRepository){
-        this.productRepository = productRepository;
+    public ProductController(ProductService productService) {
+        this.productService = productService;
     }
 
-    ProductService productService = new ProductService(productRepository);
+        public void deleteProduct ( int id){
+            productService.delete(id);
+        }
 
+        public void updateProduct ( int id, Product product){
+            productService.update(id, product);
+        }
 
-    public void deleteProduct(int id) {
-        productService.delete(id);
-    }
+        public void addProduct (Product product){
 
-    public void updateProduct(int id, Product product) {
-        productService.update(id, product);
-    }
+            productService.save(product);
+        }
 
-    public void addProduct(Product product) {
+        public Set<Product> getProducts () {
+            return productService.findAll();
+        }
 
-        productService.save(product);
-    }
+        public Product getProductById ( int id){
+            return productService.findById(id);
+        }
 
-    public Set<Product> getProducts() {
-        return productService.findAll();
-    }
-
-    public Product getProductById(int id) {
-        return productService.findById(id);
-    }
 }
