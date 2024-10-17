@@ -5,6 +5,8 @@ import java.util.Objects;
 
 public class Product {
 
+
+    //
     private int id;
     private int companyId;
     private int codeId;
