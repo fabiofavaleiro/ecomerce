@@ -43,8 +43,7 @@ public class Main {
                     break;
                 case 2:
                     int id = Integer.parseInt(JOptionPane.showInputDialog("Qual é o ID do produto desejado?"));
-                    product = productController.getProductById(id);
-                    System.out.println(product);
+                    System.out.println(productController.getProductById(id));
 
                     break;
                 case 3:
@@ -66,18 +65,16 @@ public class Main {
 
                     break;
                 case 4:
-                    int id4 = Integer.parseInt(JOptionPane.showInputDialog("Qual é o ID do produto que deseja Atualizar?"));
-                    product = new Product();
-                    product.setId(Integer.parseInt(JOptionPane.showInputDialog("Qual é o ID do novo Produto?")));
-                    product.setCompanyId(Integer.parseInt(JOptionPane.showInputDialog("Qual é o ID da Companhia?")));
-                    product.setCodeId(Integer.parseInt(JOptionPane.showInputDialog("Qual é o ID do codigo?")));
-                    product.setProductName(JOptionPane.showInputDialog("Qual é o nome do Produto?"));
-                    product.setValue(Double.valueOf(JOptionPane.showInputDialog("Qual é o valor do produto?")));
-                    product.setProductType(JOptionPane.showInputDialog("Qual é o tipo do produto?"));
-                    product.setProductDescription(JOptionPane.showInputDialog("Qual é a descrição do produto?"));
-                    product.setProductImage(JOptionPane.showInputDialog("Qual é a o caminho da imagem do produto"));
-                    product.setCreationDate(new Date(2021-01-03));
-                    productController.updateProduct(id4,product);
+
+                    int id4 = Integer.parseInt(JOptionPane.showInputDialog("Qual é o ID do produto desejado?"));
+
+                    System.out.println(productController.getProductById(id4));
+                    String nameProduct = (JOptionPane.showInputDialog("Qual o nome que deseja para o Produto?"));
+                    double valueProduct = (Double.valueOf(JOptionPane.showInputDialog("Qual o valor do produto?")));
+                    productController.updateProduct(id4, nameProduct, valueProduct ); //aqui atualiza o produto
+                    System.out.println("Produto atualizado");
+                    System.out.println(productController.getProductById(id4));
+
 
                     break;
                 case 5:

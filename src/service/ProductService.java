@@ -4,6 +4,7 @@ import entity.Product;
 import repository.ProductRepository;
 
 
+import java.util.Objects;
 import java.util.Set;
 
 public class ProductService {
@@ -26,10 +27,16 @@ public class ProductService {
 
     }
 
-    public void update(int id, Product product) {
+    public void update(int id, String nameProduct , double valueProduct) {
 
         if(productRepository.exisThisID(id)){
-            productRepository.update(id, product);
+
+            Product product = findById(id);
+            product.setProductName(nameProduct);
+            product.setValue(valueProduct);
+            productRepository.delete(id);
+            productRepository.save(product);
+
         }else {
             messageIdNoencontred();
         }

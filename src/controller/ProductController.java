@@ -17,8 +17,8 @@ ProductService productService;
             productService.delete(id);
         }
 
-        public void updateProduct ( int id, Product product){
-            productService.update(id, product);
+        public void updateProduct ( int id, String nameProduct , double valueProduct){
+            productService.update(id, nameProduct, valueProduct );
         }
 
         public void addProduct (Product product){

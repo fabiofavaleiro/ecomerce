@@ -47,9 +47,7 @@ public class ProductRepositoryImpl implements ProductRepository{
             }
     }
 
-    private void messageIdNoencontred(){
-        System.out.println("Seu imbecil, o ID que vc digitou não existe na lista. Quer que eu ligue no manicombio?");
-    }
+
 
     public boolean exisThisID(int id){
         boolean exist = false;
