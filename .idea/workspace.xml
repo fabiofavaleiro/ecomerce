@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1549ca34-6cb8-4d0a-98f4-f2cb4e193a3a" name="Changes" comment="Tranferencia de responsabilidades do Repository para Servises">
+    <list default="true" id="1549ca34-6cb8-4d0a-98f4-f2cb4e193a3a" name="Changes" comment="retirei o update e usei apenas o delete e o save.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/ProductRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/ProductRepositoryImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/ProductService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -164,7 +161,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729179200483</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="retirei o update e usei apenas o delete e o save.">
+      <option name="closed" value="true" />
+      <created>1729183367964</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1729183367964</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -182,7 +187,8 @@
     <MESSAGE value="000" />
     <MESSAGE value="injeção de dependencia pronta" />
     <MESSAGE value="Tranferencia de responsabilidades do Repository para Servises" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tranferencia de responsabilidades do Repository para Servises" />
+    <MESSAGE value="retirei o update e usei apenas o delete e o save." />
+    <option name="LAST_COMMIT_MESSAGE" value="retirei o update e usei apenas o delete e o save." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -190,7 +196,7 @@
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Main.java</url>
           <line>73</line>
-          <option name="timeStamp" value="3" />
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

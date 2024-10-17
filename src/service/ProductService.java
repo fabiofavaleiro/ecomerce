@@ -34,8 +34,8 @@ public class ProductService {
             Product product = findById(id);
             product.setProductName(nameProduct);
             product.setValue(valueProduct);
-            productRepository.delete(id);
-            productRepository.save(product);
+            productRepository.update(id, product);
+
 
         }else {
             messageIdNoencontred();
