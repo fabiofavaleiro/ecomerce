@@ -13,7 +13,6 @@ public class Main {
     public static void main(String[] args) {
 
 
-
         Scanner scanner = new Scanner(System.in);
         Product product;
         ProductController productController = new ProductController(new ProductService(new ProductRepositoryImpl()));
