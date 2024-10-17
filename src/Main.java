@@ -61,8 +61,6 @@ public class Main {
                     product.setCreationDate(new Date(2021-01-03));
                     productController.addProduct(product);
 
-
-
                     break;
                 case 4:
 
@@ -74,7 +72,6 @@ public class Main {
                     productController.updateProduct(id4, nameProduct, valueProduct ); //aqui atualiza o produto
                     System.out.println("Produto atualizado");
                     System.out.println(productController.getProductById(id4));
-
 
                     break;
                 case 5:

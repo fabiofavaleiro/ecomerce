@@ -3,10 +3,10 @@ package entity;
 import java.util.Date;
 import java.util.Objects;
 
-public class Product {
+public class Product{
 
 
-//
+
     private int id;
     private int companyId;
     private int codeId;
@@ -117,4 +117,7 @@ public class Product {
                 ", creationDate=" + creationDate +
                 '}';
     }
+
+
+
 }

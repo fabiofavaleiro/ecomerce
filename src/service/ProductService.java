@@ -31,11 +31,7 @@ public class ProductService {
 
         if(productRepository.exisThisID(id)){
 
-            Product product = findById(id);
-            product.setProductName(nameProduct);
-            product.setValue(valueProduct);
-            productRepository.update(id, product);
-
+            productRepository.update(id, nameProduct , valueProduct);
 
         }else {
             messageIdNoencontred();

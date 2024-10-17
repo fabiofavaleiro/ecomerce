@@ -2,6 +2,7 @@ package repository;
 
 import entity.Product;
 
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -15,13 +16,18 @@ public class ProductRepositoryImpl implements ProductRepository{
     public Product findById(int id) {
             for (Product product1: listProduct){
                 if (product1.getId() == id){
+
                     Product product= new Product();
 
                     product.setId(product1.getId());
-
-
-
-
+                    product.setCompanyId(product1.getCompanyId());
+                    product.setCodeId(product1.getCodeId());
+                    product.setProductName(product1.getProductName());
+                    product.setValue(product1.getValue());
+                    product.setProductType(product1.getProductType());
+                    product.setProductDescription(product1.getProductDescription());
+                    product.setProductImage(product1.getProductImage());
+                    product.setCreationDate(product1.getCreationDate());
                     return product;
                 }
             }
@@ -39,9 +45,15 @@ public class ProductRepositoryImpl implements ProductRepository{
     }
 
     @Override
-    public void update(int id, Product product) {
+    public void update(int id, String nameProduct , double valueProduct) {
+
+        Product product = findById(id);
+        product.setProductName(nameProduct);
+        product.setValue(valueProduct);
+
             delete(id);
             listProduct.add(product);
+
     }
 
     @Override
