@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1549ca34-6cb8-4d0a-98f4-f2cb4e193a3a" name="Changes" comment="erro no update muito estranho">
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="1549ca34-6cb8-4d0a-98f4-f2cb4e193a3a" name="Changes" comment="Resolvido o erro no Update!!!" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,6 +43,10 @@
             <RecentBranchesForRepo>
               <option name="branches">
                 <list>
+                  <RecentBranch>
+                    <option name="branchName" value="Main" />
+                    <option name="lastUsedInstant" value="1729189578" />
+                  </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="teste001" />
                     <option name="lastUsedInstant" value="1729188915" />
@@ -87,7 +89,7 @@
     "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "teste001",
+    "git-widget-placeholder": "Main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/huill/IdeaProjects/ecomerce",
     "onboarding.tips.debug.path": "C:/Users/huill/IdeaProjects/ecomerce/src/Main.java"
@@ -230,7 +232,23 @@
       <option name="project" value="LOCAL" />
       <updated>1729189216191</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Resolvido o erro no Update!!!">
+      <option name="closed" value="true" />
+      <created>1729189519886</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1729189519886</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Resolvido o erro no Update!!!">
+      <option name="closed" value="true" />
+      <created>1729189723026</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1729189723026</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -253,7 +271,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -265,6 +295,7 @@
     <MESSAGE value="Tranferencia de responsabilidades do Repository para Servises" />
     <MESSAGE value="retirei o update e usei apenas o delete e o save." />
     <MESSAGE value="erro no update muito estranho" />
-    <option name="LAST_COMMIT_MESSAGE" value="erro no update muito estranho" />
+    <MESSAGE value="Resolvido o erro no Update!!!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Resolvido o erro no Update!!!" />
   </component>
 </project>
