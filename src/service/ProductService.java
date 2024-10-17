@@ -34,7 +34,7 @@ public class ProductService {
             Product product = findById(id);
             product.setProductName(nameProduct);
             product.setValue(valueProduct);
-            productRepository.update(id, product);
+            //productRepository.update(id, product); >>> essa fezes estava atrapalhando tudo.
 
 
         }else {

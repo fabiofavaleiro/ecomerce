@@ -39,6 +39,7 @@ public class ProductRepositoryImpl implements ProductRepository{
 
     @Override
     public void delete(int id) {
+
             for (Product product1 : listProduct) {
                 if (product1.getId() == id) {
                     listProduct.remove(product1);
