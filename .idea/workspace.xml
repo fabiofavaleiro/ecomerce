@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1549ca34-6cb8-4d0a-98f4-f2cb4e193a3a" name="Changes" comment="retirei o update e usei apenas o delete e o save.">
+    <list default="true" id="1549ca34-6cb8-4d0a-98f4-f2cb4e193a3a" name="Changes" comment="erro no update muito estranho">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/ProductService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +20,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="001" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -29,6 +33,35 @@
     &quot;assignee&quot;: &quot;fabiofavaleiro&quot;
   }
 }</component>
+  <component name="GitToolBoxStore">
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="GuiaRefatoracao" />
+                    <option name="lastUsedInstant" value="1731364747" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="001" />
+                    <option name="lastUsedInstant" value="1729210785" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="Main" />
+                    <option name="lastUsedInstant" value="1729210784" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
+  </component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/fabiofavaleiro/ecomerce.git&quot;,
@@ -47,10 +80,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.Main.executor": "Debug",
+    "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "GuiaRefatoracao",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/huill/IdeaProjects/ecomerce",
     "onboarding.tips.debug.path": "C:/Users/huill/IdeaProjects/ecomerce/src/Main.java"
@@ -169,15 +202,50 @@
       <option name="project" value="LOCAL" />
       <updated>1729183367964</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="erro no update muito estranho">
+      <option name="closed" value="true" />
+      <created>1729210874681</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1729210874681</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="GuiaRefatoracao" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="GuiaRefatoracao" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -188,17 +256,8 @@
     <MESSAGE value="injeção de dependencia pronta" />
     <MESSAGE value="Tranferencia de responsabilidades do Repository para Servises" />
     <MESSAGE value="retirei o update e usei apenas o delete e o save." />
-    <option name="LAST_COMMIT_MESSAGE" value="retirei o update e usei apenas o delete e o save." />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>73</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="organizei o equals e hashcode e coloquei o metodos productByID para retornar um clono do objeto da lista" />
+    <MESSAGE value="erro no update muito estranho" />
+    <option name="LAST_COMMIT_MESSAGE" value="erro no update muito estranho" />
   </component>
 </project>
