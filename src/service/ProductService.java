@@ -27,23 +27,27 @@ public class ProductService {
 
     }
 
-    public void update(int id, String nameProduct , double valueProduct) {
-
-        if(productRepository.exisThisID(id)){
-
-            Product product = findById(id);
-            product.setProductName(nameProduct);
-            product.setValue(valueProduct);
-            productRepository.update(id, product);
+    public void update(Product product) {
 
 
+
+
+        if(productRepository.exisThisID(product.getId())){
+            productRepository.delete(product.getId());
+            productRepository.update(product);
         }else {
             messageIdNoencontred();
         }
     }
 
     public void save(Product product) {
+
+        /*if (product.getId() != 0 ){
+            throw new IllegalArgumentException("O Produto não deve ter ID ao ser salvo.");
+        }*/
+
         productRepository.save(product);
+
     }
 
     public Set<Product> findAll() {
@@ -60,7 +64,7 @@ public class ProductService {
     }
 
     private void messageIdNoencontred(){
-        System.out.println("Seu imbecil, o ID que vc digitou não existe na lista. Quer que eu ligue no manicombio?");
+        System.out.println("Nobre usuàrio, o ID desejado não está na lista, por favor tente novamente, obrigado!");
     }
 
 

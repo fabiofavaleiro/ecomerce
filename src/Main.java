@@ -68,12 +68,19 @@ public class Main {
 
                     int id4 = Integer.parseInt(JOptionPane.showInputDialog("Qual é o ID do produto desejado?"));
 
-                    System.out.println(productController.getProductById(id4));
-                    String nameProduct = (JOptionPane.showInputDialog("Qual o nome que deseja para o Produto?"));
-                    double valueProduct = (Double.valueOf(JOptionPane.showInputDialog("Qual o valor do produto?")));
-                    productController.updateProduct(id4, nameProduct, valueProduct ); //aqui atualiza o produto
-                    System.out.println("Produto atualizado");
-                    System.out.println(productController.getProductById(id4));
+
+
+                        System.out.println(productController.getProductById(id4));
+
+                        product = new Product();
+
+                        product = productController.getProductById(id4);
+                        product.setProductName("produto foi atualizado");
+
+
+                        productController.updateProduct(product); //aqui atualiza o produto
+                        System.out.println("Produto atualizado");
+                        System.out.println(productController.getProductById(id4));
 
 
                     break;

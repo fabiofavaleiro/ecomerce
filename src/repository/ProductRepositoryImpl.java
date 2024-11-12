@@ -1,11 +1,13 @@
 package repository;
 
 import entity.Product;
-
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
 public class ProductRepositoryImpl implements ProductRepository{
+
+    private static int currentID = 1;
 
     protected  Set<Product> listProduct = new HashSet<>();
 
@@ -23,18 +25,21 @@ public class ProductRepositoryImpl implements ProductRepository{
 
     @Override
     public Set<Product> findAll() {
-        return listProduct;
+
+        return Collections.unmodifiableSet(listProduct);
+
     }
 
     @Override
     public void save(Product product) {
+        product.setCodeId(currentID);
+        currentID += 1;
         listProduct.add(product);
     }
 
     @Override
-    public void update(int id, Product product) {
-            delete(id);
-            listProduct.add(product);
+    public void update(Product product) {
+                    listProduct.add(product);
     }
 
     @Override
@@ -50,13 +55,13 @@ public class ProductRepositoryImpl implements ProductRepository{
 
 
     public boolean exisThisID(int id){
-        boolean exist = false;
+
         for (Product product1: listProduct){
             if (product1.getId() == id){
-                exist = true;
+                return true;
             }
         }
-        return exist;
+        return false;
     }
 
 }
