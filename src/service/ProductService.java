@@ -2,7 +2,7 @@ package service;
 
 import entity.Product;
 import repository.ProductRepository;
-
+import Exception.EcommerceDomainException;
 
 import java.util.Objects;
 import java.util.Set;
@@ -29,25 +29,22 @@ public class ProductService {
 
     public void update(Product product) {
 
-
-
-
         if(productRepository.exisThisID(product.getId())){
             productRepository.delete(product.getId());
             productRepository.update(product);
         }else {
             messageIdNoencontred();
+            throw new EcommerceDomainException("ID não existe ao atualizar", 1);
         }
     }
 
     public void save(Product product) {
 
-        /*if (product.getId() != 0 ){
+         if (product.getId() != 0 ){
             throw new IllegalArgumentException("O Produto não deve ter ID ao ser salvo.");
-        }*/
-
-        productRepository.save(product);
-
+        }else{
+             productRepository.save(product);
+         }
     }
 
     public Set<Product> findAll() {

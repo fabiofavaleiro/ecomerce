@@ -19,7 +19,7 @@ public class Main {
         ProductController productController = new ProductController(new ProductService(new ProductRepositoryImpl()));
         Set<Product> listaProduct;
 
-        int opcao = 0;
+        int opcao= 0;
 
         while (opcao != 6) {
             System.out.println("Escolha uma opção:");
@@ -50,7 +50,7 @@ public class Main {
 
                     product = new Product();
 
-                    product.setId(Integer.parseInt(JOptionPane.showInputDialog("Qual é o ID do Produto?")));
+                    //product.setId(Integer.parseInt(JOptionPane.showInputDialog("Qual é o ID do Produto?")));
                     product.setCompanyId(1);
                     product.setCodeId(1);
                     product.setProductName("nome");
