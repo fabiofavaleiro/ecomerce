@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1549ca34-6cb8-4d0a-98f4-f2cb4e193a3a" name="Changes" comment="Lancei p ObjectNot FoundException no update e no save usei o IllegalArgumentException">
-      <change afterPath="$PROJECT_DIR$/src/Exception/EcommerceDomainException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exception/IllegalArgumentException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exception/ObjectNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="1549ca34-6cb8-4d0a-98f4-f2cb4e193a3a" name="Changes" comment="Lancei p ObjectNot FoundException no update e no save usei o IllegalArgumentException e correção de um erro de return">
+      <change afterPath="$PROJECT_DIR$/src/response/Response.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecomerce.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repository/ProductRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/ProductRepositoryImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -249,7 +246,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732059591849</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Lancei p ObjectNot FoundException no update e no save usei o IllegalArgumentException">
+      <option name="closed" value="true" />
+      <created>1732059755060</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1732059755060</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -300,6 +305,7 @@
     <MESSAGE value="erro no update muito estranho !!! RESOLVIDO!!!" />
     <MESSAGE value="Refactor: Separação de Responsabilidades e Boas Práticas" />
     <MESSAGE value="Lancei p ObjectNot FoundException no update e no save usei o IllegalArgumentException" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lancei p ObjectNot FoundException no update e no save usei o IllegalArgumentException" />
+    <MESSAGE value="Lancei p ObjectNot FoundException no update e no save usei o IllegalArgumentException e correção de um erro de return" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lancei p ObjectNot FoundException no update e no save usei o IllegalArgumentException e correção de um erro de return" />
   </component>
 </project>

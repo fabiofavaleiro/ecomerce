@@ -1,9 +1,11 @@
 import controller.ProductController;
 import entity.Product;
 import repository.ProductRepositoryImpl;
+import response.Response;
 import service.ProductService;
 import javax.swing.*;
 import java.util.Date;
+import java.util.Objects;
 import java.util.Scanner;
 import java.util.Set;
 
@@ -43,7 +45,10 @@ public class Main {
                     break;
                 case 2:
                     int id = Integer.parseInt(JOptionPane.showInputDialog("Qual é o ID do produto desejado?"));
-                    System.out.println(productController.getProductById(id));
+
+
+                    product = productController.getProductById(id).getProduto();
+                    System.out.println(product);
 
                     break;
                 case 3:
@@ -70,17 +75,22 @@ public class Main {
 
 
 
-                        System.out.println(productController.getProductById(id4));
+                        System.out.println(productController.getProductById(id4).getProduto());
 
-                        product = new Product();
+                        product = productController.getProductById(id4).getProduto();
 
-                        product = productController.getProductById(id4);
+
+
+
+
                         product.setProductName("produto foi atualizado");
+
+
 
 
                         productController.updateProduct(product); //aqui atualiza o produto
                         System.out.println("Produto atualizado");
-                        System.out.println(productController.getProductById(id4));
+                        System.out.println(productController.getProductById(id4).getProduto());
 
 
                     break;

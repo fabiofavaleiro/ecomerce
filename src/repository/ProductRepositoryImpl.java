@@ -32,7 +32,7 @@ public class ProductRepositoryImpl implements ProductRepository{
 
     @Override
     public void save(Product product) {
-        product.setCodeId(currentID);
+        product.setId(currentID);
         currentID += 1;
         listProduct.add(product);
     }
