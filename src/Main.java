@@ -73,25 +73,25 @@ public class Main {
 
                     int id4 = Integer.parseInt(JOptionPane.showInputDialog("Qual é o ID do produto desejado?"));
 
-
-
                         System.out.println(productController.getProductById(id4).getProduto());
 
-                        product = productController.getProductById(id4).getProduto();
+                        product = new Product();
 
-
-
-
+                        product.setId(productController.getProductById(id4).getProduto().getId());
+                        product.setCompanyId(productController.getProductById(id4).getProduto().getCompanyId());
+                        product.setCodeId(productController.getProductById(id4).getProduto().getCodeId());
+                        product.setProductName(productController.getProductById(id4).getProduto().getProductName());//nem precisava desse só fiz por fazer
+                        product.setValue(productController.getProductById(id4).getProduto().getValue());
+                        product.setProductType(productController.getProductById(id4).getProduto().getProductType());
+                        product.setProductDescription(productController.getProductById(id4).getProduto().getProductDescription());
+                        product.setProductImage(productController.getProductById(id4).getProduto().getProductImage());
+                        product.setCreationDate(productController.getProductById(id4).getProduto().getCreationDate());
 
                         product.setProductName("produto foi atualizado");
-
-
-
 
                         productController.updateProduct(product); //aqui atualiza o produto
                         System.out.println("Produto atualizado");
                         System.out.println(productController.getProductById(id4).getProduto());
-
 
                     break;
                 case 5:
