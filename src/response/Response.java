@@ -4,57 +4,34 @@ import entity.Product;
 
 public class Response<T> {
     private T data;
-    private String errorMessage;
-    private int errorcode;
-    Product produto = new Product();
-    int teste;
+    private ErrorDetails error;
+
 
 
     public Response(T data){
         this.data = data;
     }
-
-    public Response(Product produto, int errorCode, int teste){
-        this.produto = produto;
-        this.errorcode = errorCode;
-        this.teste = teste;
+    public Response(ErrorDetails error){
+        this.error = error;
+    }
+    public Response(){
     }
 
-    public Response(String errorMessage, int errorCode){
-        this.errorMessage = errorMessage;
-        this.errorcode = errorCode;
-    }
-
-    public T getData(){
+    public T getData() {
         return data;
     }
 
-    public String getErrorMessage() {
-        return errorMessage;
+    public void setData(T data) {
+        this.data = data;
     }
 
-    public int getErrorcode() {
-        return errorcode;
+    public ErrorDetails getError() {
+        return error;
     }
 
-    public boolean isSuccess() {
-        return errorMessage == null;
+    public void setError(ErrorDetails error) {
+        this.error = error;
     }
 
-    @Override
-    public String toString() {
-        return "Response{" +
-                "data=" + data +
-                ", errorMessage='" + errorMessage + '\'' +
-                ", errorcode=" + errorcode +
-                '}';
-    }
 
-    public Product getProduto() {
-        return produto;
-    }
-
-    public void setProduto(Product produto) {
-        this.produto = produto;
-    }
 }

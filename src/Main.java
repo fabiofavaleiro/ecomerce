@@ -21,6 +21,7 @@ public class Main {
         ProductController productController = new ProductController(new ProductService(new ProductRepositoryImpl()));
         Set<Product> listaProduct;
 
+
         int opcao= 0;
 
         while (opcao != 6) {
@@ -36,7 +37,10 @@ public class Main {
 
             switch (opcao) {
                 case 1:
-                    listaProduct = productController.getProducts();
+
+                    Response<Set<Product>> resposta = productController.getProducts();
+                    listaProduct = resposta.getData();
+
 
                     for (Product product1 : listaProduct){
                         System.out.println(product1);
@@ -47,8 +51,10 @@ public class Main {
                     int id = Integer.parseInt(JOptionPane.showInputDialog("Qual é o ID do produto desejado?"));
 
 
-                    product = productController.getProductById(id).getProduto();
-                    System.out.println(product);
+                    Response<Product> product2 = productController.getProductById(id);
+
+
+                    System.out.println(product2);
 
                     break;
                 case 3:
@@ -73,25 +79,25 @@ public class Main {
 
                     int id4 = Integer.parseInt(JOptionPane.showInputDialog("Qual é o ID do produto desejado?"));
 
-                        System.out.println(productController.getProductById(id4).getProduto());
+                        System.out.println(productController.getProductById(id4).getData());
 
                         product = new Product();
 
-                        product.setId(productController.getProductById(id4).getProduto().getId());
-                        product.setCompanyId(productController.getProductById(id4).getProduto().getCompanyId());
-                        product.setCodeId(productController.getProductById(id4).getProduto().getCodeId());
-                        product.setProductName(productController.getProductById(id4).getProduto().getProductName());//nem precisava desse só fiz por fazer
-                        product.setValue(productController.getProductById(id4).getProduto().getValue());
-                        product.setProductType(productController.getProductById(id4).getProduto().getProductType());
-                        product.setProductDescription(productController.getProductById(id4).getProduto().getProductDescription());
-                        product.setProductImage(productController.getProductById(id4).getProduto().getProductImage());
-                        product.setCreationDate(productController.getProductById(id4).getProduto().getCreationDate());
+                        product.setId(productController.getProductById(id4).getData().getId());
+                        product.setCompanyId(productController.getProductById(id4).getData().getCompanyId());
+                        product.setCodeId(productController.getProductById(id4).getData().getCodeId());
+                        product.setProductName(productController.getProductById(id4).getData().getProductName());//nem precisava desse só fiz por fazer
+                        product.setValue(productController.getProductById(id4).getData().getValue());
+                        product.setProductType(productController.getProductById(id4).getData().getProductType());
+                        product.setProductDescription(productController.getProductById(id4).getData().getProductDescription());
+                        product.setProductImage(productController.getProductById(id4).getData().getProductImage());
+                        product.setCreationDate(productController.getProductById(id4).getData().getCreationDate());
 
                         product.setProductName("produto foi atualizado");
 
                         productController.updateProduct(product); //aqui atualiza o produto
                         System.out.println("Produto atualizado");
-                        System.out.println(productController.getProductById(id4).getProduto());
+                        System.out.println(productController.getProductById(id4).getData());
 
                     break;
                 case 5:
