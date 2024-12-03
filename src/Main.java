@@ -114,22 +114,5 @@ public class Main {
             }
         }scanner.close();
     }
-
-
-
-
-
-
-
-
 }
 
-                  /*  product.setId(Integer.parseInt(JOptionPane.showInputDialog("Qual é o ID do Produto?")));
-        product.setCompanyId(Integer.parseInt(JOptionPane.showInputDialog("Qual é o ID da Companhia?")));
-        product.setCodeId(Integer.parseInt(JOptionPane.showInputDialog("Qual é o ID do codigo?")));
-        product.setProductName(JOptionPane.showInputDialog("Qual é o nome do Produto?"));
-        product.setValue(Double.valueOf(JOptionPane.showInputDialog("Qual é o valor do produto?")));
-        product.setProductType(JOptionPane.showInputDialog("Qual é o tipo do produto?"));
-        product.setProductDescription(JOptionPane.showInputDialog("Qual é a descrição do produto?"));
-        product.setProductImage(JOptionPane.showInputDialog("Qual é a o caminho da imagem do produto"));
-        product.setCreationDate(new Date(JOptionPane.showInputDialog("Qual é a data do produto no padrão yyyy-MM-dd?")));*/

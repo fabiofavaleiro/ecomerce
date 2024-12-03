@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1549ca34-6cb8-4d0a-98f4-f2cb4e193a3a" name="Changes" comment="Corrigi os erros do ProductController e no Main.">
-      <change afterPath="$PROJECT_DIR$/src/response/ErrorDetails.java" afterDir="false" />
+    <list default="true" id="1549ca34-6cb8-4d0a-98f4-f2cb4e193a3a" name="Changes" comment="organizei o equals e hashcode e coloquei o metodos productByID para retornar um clono do objeto da lista">
+      <change afterPath="$PROJECT_DIR$/src/response/ResponseBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/ProductRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/ProductRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/response/Response.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/response/Response.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,17 +25,32 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="001" />
+        <entry key="$PROJECT_DIR$" value="Main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;fabiofavaleiro&quot;
-  }
+  &quot;history&quot;: [
+    {
+      &quot;searchQuery&quot;: &quot;teste&quot;,
+      &quot;state&quot;: &quot;OPEN&quot;,
+      &quot;assignee&quot;: &quot;fabiofavaleiro&quot;
+    }
+  ],
+  &quot;lastFilter&quot;: {}
 }</component>
+  <component name="GitHubPullRequestState"><![CDATA[{
+  "prStates": [
+    {
+      "id": {
+        "id": "PR_kwDOM_VHgM6DgsZt",
+        "number": 1
+      },
+      "lastSeen": 1733177190999
+    }
+  ]
+}]]></component>
   <component name="GitToolBoxStore">
     <option name="recentBranches">
       <RecentBranches>
@@ -48,15 +61,11 @@
                 <list>
                   <RecentBranch>
                     <option name="branchName" value="GuiaRefatoracao" />
-                    <option name="lastUsedInstant" value="1731364747" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="001" />
-                    <option name="lastUsedInstant" value="1729210785" />
+                    <option name="lastUsedInstant" value="1733177176" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="Main" />
-                    <option name="lastUsedInstant" value="1729210784" />
+                    <option name="lastUsedInstant" value="1729189578" />
                   </RecentBranch>
                 </list>
               </option>
@@ -70,7 +79,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/fabiofavaleiro/ecomerce.git&quot;,
-    &quot;accountId&quot;: &quot;06411922-37a3-4f0d-91df-9aa77f961eb2&quot;
+    &quot;accountId&quot;: &quot;b8719f05-4f7c-4654-9d9f-95d2dccabbf0&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -83,17 +92,31 @@
     <option name="showLibraryContents" value="true" />
     <option name="showScratchesAndConsoles" value="false" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;#1 on GuiaRefatoracao&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/huill/IdeaProjects/ecomerce&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/huill/IdeaProjects/ecomerce/src/Main.java&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "#1 on GuiaRefatoracao",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/huill/IdeaProjects/ecomerce",
+    "onboarding.tips.debug.path": "C:/Users/huill/IdeaProjects/ecomerce/src/Main.java"
   }
-}</component>
+}]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="ecomerce" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="ecomerce" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -209,80 +232,109 @@
     </task>
     <task id="LOCAL-00014" summary="erro no update muito estranho">
       <option name="closed" value="true" />
-      <created>1729210874681</created>
+      <created>1729185103818</created>
       <option name="number" value="00014" />
       <option name="presentableId" value="LOCAL-00014" />
       <option name="project" value="LOCAL" />
-      <updated>1729210874681</updated>
+      <updated>1729185103818</updated>
     </task>
-    <task id="LOCAL-00015" summary="erro no update muito estranho !!! RESOLVIDO!!!">
+    <task id="LOCAL-00015" summary="erro no update muito estranho">
       <option name="closed" value="true" />
-      <created>1731365159587</created>
+      <created>1729188960153</created>
       <option name="number" value="00015" />
       <option name="presentableId" value="LOCAL-00015" />
       <option name="project" value="LOCAL" />
-      <updated>1731365159587</updated>
+      <updated>1729188960153</updated>
     </task>
-    <task id="LOCAL-00016" summary="Refactor: Separação de Responsabilidades e Boas Práticas">
+    <task id="LOCAL-00016" summary="erro no update muito estranho">
       <option name="closed" value="true" />
-      <created>1731454522171</created>
+      <created>1729189216191</created>
       <option name="number" value="00016" />
       <option name="presentableId" value="LOCAL-00016" />
       <option name="project" value="LOCAL" />
-      <updated>1731454522177</updated>
+      <updated>1729189216191</updated>
     </task>
-    <task id="LOCAL-00017" summary="Refactor: Separação de Responsabilidades e Boas Práticas">
+    <task id="LOCAL-00017" summary="Resolvido o erro no Update!!!">
       <option name="closed" value="true" />
-      <created>1731455515906</created>
+      <created>1729189519886</created>
       <option name="number" value="00017" />
       <option name="presentableId" value="LOCAL-00017" />
       <option name="project" value="LOCAL" />
-      <updated>1731455515906</updated>
+      <updated>1729189519886</updated>
     </task>
-    <task id="LOCAL-00018" summary="Lancei p ObjectNot FoundException no update e no save usei o IllegalArgumentException">
+    <task id="LOCAL-00018" summary="Resolvido o erro no Update!!!">
       <option name="closed" value="true" />
-      <created>1732059591849</created>
+      <created>1729189723026</created>
       <option name="number" value="00018" />
       <option name="presentableId" value="LOCAL-00018" />
       <option name="project" value="LOCAL" />
-      <updated>1732059591849</updated>
+      <updated>1729189723026</updated>
     </task>
-    <task id="LOCAL-00019" summary="Lancei p ObjectNot FoundException no update e no save usei o IllegalArgumentException">
+    <task id="LOCAL-00019" summary="Resolvido o erro no Update!!!">
       <option name="closed" value="true" />
-      <created>1732059755060</created>
+      <created>1729189976951</created>
       <option name="number" value="00019" />
       <option name="presentableId" value="LOCAL-00019" />
       <option name="project" value="LOCAL" />
-      <updated>1732059755060</updated>
+      <updated>1729189976953</updated>
     </task>
-    <task id="LOCAL-00020" summary="terminei a lista generics falta corrigir o update">
+    <task id="LOCAL-00020" summary="Resolvido o erro no Update!!!">
       <option name="closed" value="true" />
-      <created>1732317295930</created>
+      <created>1729203724645</created>
       <option name="number" value="00020" />
       <option name="presentableId" value="LOCAL-00020" />
       <option name="project" value="LOCAL" />
-      <updated>1732317295930</updated>
+      <updated>1729203724645</updated>
     </task>
-    <task id="LOCAL-00021" summary="terminei a lista generics falta corrigir o update">
+    <task id="LOCAL-00021" summary="organizei o equals e hashcode e coloquei o metodos productByID para retornar um clono do objeto da lista">
       <option name="closed" value="true" />
-      <created>1732832801066</created>
+      <created>1729209282177</created>
       <option name="number" value="00021" />
       <option name="presentableId" value="LOCAL-00021" />
       <option name="project" value="LOCAL" />
-      <updated>1732832801066</updated>
+      <updated>1729209282177</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="organizei o equals e hashcode e coloquei o metodos productByID para retornar um clono do objeto da lista">
+      <option name="closed" value="true" />
+      <created>1729209325732</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1729209325732</updated>
+    </task>
+    <task id="LOCAL-00023" summary="organizei o equals e hashcode e coloquei o metodos productByID para retornar um clono do objeto da lista">
+      <option name="closed" value="true" />
+      <created>1729209406771</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1729209406771</updated>
+    </task>
+    <task id="LOCAL-00024" summary="organizei o equals e hashcode e coloquei o metodos productByID para retornar um clono do objeto da lista">
+      <option name="closed" value="true" />
+      <created>1729209469122</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1729209469122</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="76c8a276-ac2f-481f-8a80-d708304e1f07" value="TOOL_WINDOW" />
+      </map>
+    </option>
     <option name="RECENT_FILTERS">
       <map>
-        <entry key="Branch">
+        <entry key="User">
           <value>
             <list>
               <RecentGroup>
                 <option name="FILTER_VALUES">
-                  <option value="GuiaRefatoracao" />
+                  <option value="*" />
                 </option>
               </RecentGroup>
             </list>
@@ -292,6 +344,30 @@
     </option>
     <option name="TAB_STATES">
       <map>
+        <entry key="76c8a276-ac2f-481f-8a80-d708304e1f07">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="range">
+                    <value>
+                      <list>
+                        <option value="origin/Main..origin/GuiaRefatoracao" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
             <State>
@@ -300,7 +376,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="GuiaRefatoracao" />
+                        <option value="master" />
                       </list>
                     </value>
                   </entry>
@@ -317,23 +393,18 @@
     <MESSAGE value="injeção de dependencia pronta" />
     <MESSAGE value="Tranferencia de responsabilidades do Repository para Servises" />
     <MESSAGE value="retirei o update e usei apenas o delete e o save." />
-    <MESSAGE value="organizei o equals e hashcode e coloquei o metodos productByID para retornar um clono do objeto da lista" />
     <MESSAGE value="erro no update muito estranho" />
-    <MESSAGE value="erro no update muito estranho !!! RESOLVIDO!!!" />
-    <MESSAGE value="Refactor: Separação de Responsabilidades e Boas Práticas" />
-    <MESSAGE value="Lancei p ObjectNot FoundException no update e no save usei o IllegalArgumentException" />
-    <MESSAGE value="Lancei p ObjectNot FoundException no update e no save usei o IllegalArgumentException e correção de um erro de return" />
-    <MESSAGE value="terminei a lista generics falta corrigir o update" />
-    <MESSAGE value="Corrigi os erros do ProductController e no Main." />
-    <option name="LAST_COMMIT_MESSAGE" value="Corrigi os erros do ProductController e no Main." />
+    <MESSAGE value="Resolvido o erro no Update!!!" />
+    <MESSAGE value="organizei o equals e hashcode e coloquei o metodos productByID para retornar um clono do objeto da lista" />
+    <option name="LAST_COMMIT_MESSAGE" value="organizei o equals e hashcode e coloquei o metodos productByID para retornar um clono do objeto da lista" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/repository/ProductRepositoryImpl.java</url>
-          <line>17</line>
-          <option name="timeStamp" value="3" />
+          <url>file://$PROJECT_DIR$/src/Main.java</url>
+          <line>84</line>
+          <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
