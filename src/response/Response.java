@@ -2,7 +2,7 @@ package response;
 
 import entity.Product;
 
-public class Response<T> {
+public class Response<T> implements ResponseInterface<T> {
     private T data;
     private ErrorDetails error;
 
@@ -11,9 +11,11 @@ public class Response<T> {
     public Response(T data){
         this.data = data;
     }
+
     public Response(ErrorDetails error){
         this.error = error;
     }
+
     public Response(){
     }
 

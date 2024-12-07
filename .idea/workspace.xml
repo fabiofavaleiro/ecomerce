@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1549ca34-6cb8-4d0a-98f4-f2cb4e193a3a" name="Changes" comment="organizei o equals e hashcode e coloquei o metodos productByID para retornar um clono do objeto da lista">
-      <change afterPath="$PROJECT_DIR$/src/response/ResponseBuilder.java" afterDir="false" />
+    <list default="true" id="1549ca34-6cb8-4d0a-98f4-f2cb4e193a3a" name="Changes" comment="Utilizei o design pattern Builder para construir as Response's.">
+      <change afterPath="$PROJECT_DIR$/src/controller/ProductControllerInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controller/ProxyFactoryJDK.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controller/ProxyInvocationHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logs/Logs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/response/ResponseInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/response/Response.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/response/Response.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +24,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -40,17 +46,17 @@
   ],
   &quot;lastFilter&quot;: {}
 }</component>
-  <component name="GitHubPullRequestState"><![CDATA[{
-  "prStates": [
+  <component name="GitHubPullRequestState">{
+  &quot;prStates&quot;: [
     {
-      "id": {
-        "id": "PR_kwDOM_VHgM6DgsZt",
-        "number": 1
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOM_VHgM6DgsZt&quot;,
+        &quot;number&quot;: 1
       },
-      "lastSeen": 1733177190999
+      &quot;lastSeen&quot;: 1733177190999
     }
   ]
-}]]></component>
+}</component>
   <component name="GitToolBoxStore">
     <option name="recentBranches">
       <RecentBranches>
@@ -100,7 +106,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "#1 on GuiaRefatoracao",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/huill/IdeaProjects/ecomerce",
+    "last_opened_file_path": "C:/Users/Cliente/IdeaProjects/ecomerce",
     "onboarding.tips.debug.path": "C:/Users/huill/IdeaProjects/ecomerce/src/Main.java"
   }
 }]]></component>
@@ -318,7 +324,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729209469122</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Utilizei o design pattern Builder para construir as Response's.">
+      <option name="closed" value="true" />
+      <created>1733190927115</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1733190927115</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -396,17 +410,7 @@
     <MESSAGE value="erro no update muito estranho" />
     <MESSAGE value="Resolvido o erro no Update!!!" />
     <MESSAGE value="organizei o equals e hashcode e coloquei o metodos productByID para retornar um clono do objeto da lista" />
-    <option name="LAST_COMMIT_MESSAGE" value="organizei o equals e hashcode e coloquei o metodos productByID para retornar um clono do objeto da lista" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>84</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Utilizei o design pattern Builder para construir as Response's." />
+    <option name="LAST_COMMIT_MESSAGE" value="Utilizei o design pattern Builder para construir as Response's." />
   </component>
 </project>

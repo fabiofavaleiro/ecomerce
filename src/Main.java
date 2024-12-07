@@ -1,7 +1,10 @@
 import controller.ProductController;
+import controller.ProductControllerInterface;
+import controller.ProxyFactoryJDK;
 import entity.Product;
 import repository.ProductRepositoryImpl;
 import response.Response;
+import response.ResponseInterface;
 import service.ProductService;
 import javax.swing.*;
 import java.util.Date;
@@ -18,7 +21,9 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
         Product product;
-        ProductController productController = new ProductController(new ProductService(new ProductRepositoryImpl()));
+        ProductControllerInterface productController = new ProductController(new ProductService(new ProductRepositoryImpl()));
+        ProductControllerInterface proxyProductController = ProxyFactoryJDK.createProxy(
+                productController, ProductControllerInterface.class);
         Set<Product> listaProduct;
 
 
@@ -38,7 +43,7 @@ public class Main {
             switch (opcao) {
                 case 1:
 
-                    Response<Set<Product>> resposta = productController.getProducts();
+                    Response<Set<Product>> resposta = proxyProductController.getProducts();
                     listaProduct = resposta.getData();
 
 
@@ -51,7 +56,7 @@ public class Main {
                     int id = Integer.parseInt(JOptionPane.showInputDialog("Qual é o ID do produto desejado?"));
 
 
-                    Response<Product> product2 = productController.getProductById(id);
+                    Response<Product> product2 = proxyProductController.getProductById(id);
 
 
                     System.out.println(product2);
@@ -70,7 +75,7 @@ public class Main {
                     product.setProductDescription("descição");
                     product.setProductImage("c:");
                     product.setCreationDate(new Date(2021-01-03));
-                    productController.addProduct(product);
+                    proxyProductController.addProduct(product);
 
 
 
@@ -79,30 +84,30 @@ public class Main {
 
                     int id4 = Integer.parseInt(JOptionPane.showInputDialog("Qual é o ID do produto desejado?"));
 
-                        System.out.println(productController.getProductById(id4).getData());
+                        System.out.println(proxyProductController.getProductById(id4).getData());
 
                         product = new Product();
 
-                        product.setId(productController.getProductById(id4).getData().getId());
-                        product.setCompanyId(productController.getProductById(id4).getData().getCompanyId());
-                        product.setCodeId(productController.getProductById(id4).getData().getCodeId());
-                        product.setProductName(productController.getProductById(id4).getData().getProductName());//nem precisava desse só fiz por fazer
-                        product.setValue(productController.getProductById(id4).getData().getValue());
-                        product.setProductType(productController.getProductById(id4).getData().getProductType());
-                        product.setProductDescription(productController.getProductById(id4).getData().getProductDescription());
-                        product.setProductImage(productController.getProductById(id4).getData().getProductImage());
-                        product.setCreationDate(productController.getProductById(id4).getData().getCreationDate());
+                        product.setId(proxyProductController.getProductById(id4).getData().getId());
+                        product.setCompanyId(proxyProductController.getProductById(id4).getData().getCompanyId());
+                        product.setCodeId(proxyProductController.getProductById(id4).getData().getCodeId());
+                        product.setProductName(proxyProductController.getProductById(id4).getData().getProductName());//nem precisava desse só fiz por fazer
+                        product.setValue(proxyProductController.getProductById(id4).getData().getValue());
+                        product.setProductType(proxyProductController.getProductById(id4).getData().getProductType());
+                        product.setProductDescription(proxyProductController.getProductById(id4).getData().getProductDescription());
+                        product.setProductImage(proxyProductController.getProductById(id4).getData().getProductImage());
+                        product.setCreationDate(proxyProductController.getProductById(id4).getData().getCreationDate());
 
                         product.setProductName("produto foi atualizado");
 
-                        productController.updateProduct(product); //aqui atualiza o produto
+                        proxyProductController.updateProduct(product); //aqui atualiza o produto
                         System.out.println("Produto atualizado");
-                        System.out.println(productController.getProductById(id4).getData());
+                        System.out.println(proxyProductController.getProductById(id4).getData());
 
                     break;
                 case 5:
                     int id5 = Integer.parseInt(JOptionPane.showInputDialog("Qual é o ID do produto que deseja remover?"));
-                    productController.deleteProduct(id5);
+                    proxyProductController.deleteProduct(id5);
 
                     break;
                 case 6:
