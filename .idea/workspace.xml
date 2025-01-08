@@ -4,39 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b331ecb-350f-47c2-a999-d22381e9fb87" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fabiovaleiro/config/Config.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fabiovaleiro/config/ConfigFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fabiovaleiro/repository/impl/ProductRepositoryImplDB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/db-config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="6b331ecb-350f-47c2-a999-d22381e9fb87" name="Changes" comment="terminei o CRUD, ainda falta organizar os responses.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exception/EcommerceDomainException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fabiovaleiro/Exception/EcommerceDomainException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exception/IllegalArgumentException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fabiovaleiro/Exception/IllegalArgumentException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exception/ObjectNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fabiovaleiro/Exception/ObjectNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fabiovaleiro/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fabiovaleiro/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/ProductControllerInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fabiovaleiro/controller/ProductControllerInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/ProxyFactoryJDK.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fabiovaleiro/controller/ProxyFactoryJDK.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/ProxyInvocationHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fabiovaleiro/controller/ProxyInvocationHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fabiovaleiro/entity/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logs/Logs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fabiovaleiro/logs/Logs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fabiovaleiro/repository/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/ProductRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fabiovaleiro/repository/impl/ProductRepositoryImplMemory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/response/ErrorDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fabiovaleiro/response/ErrorDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/response/Response.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fabiovaleiro/response/Response.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/response/ResponseBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fabiovaleiro/response/ResponseBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/response/ResponseInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fabiovaleiro/response/ResponseInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fabiovaleiro/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fabiovaleiro/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fabiovaleiro/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fabiovaleiro/repository/impl/ProductRepositoryImplDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fabiovaleiro/repository/impl/ProductRepositoryImplDB.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +40,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.Application.executor": "Debug",
+    "Application.Application.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "RefatoracaoProxyEBuilder",
@@ -108,20 +79,28 @@
       <option name="presentableId" value="Default" />
       <updated>1736011173317</updated>
     </task>
+    <task id="LOCAL-00001" summary="terminei o CRUD, ainda falta organizar os responses.">
+      <option name="closed" value="true" />
+      <created>1736372932761</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1736372932761</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="terminei o CRUD, ainda falta organizar os responses." />
+    <option name="LAST_COMMIT_MESSAGE" value="terminei o CRUD, ainda falta organizar os responses." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/fabiovaleiro/Application.java</url>
-          <line>115</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/fabiovaleiro/Application.java</url>
-          <line>108</line>
-          <option name="timeStamp" value="12" />
+          <line>47</line>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

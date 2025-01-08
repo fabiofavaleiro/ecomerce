@@ -57,6 +57,7 @@ public class ProductRepositoryImplDB implements ProductRepository {
             PreparedStatement stmt = connection.prepareStatement(insertSQL);        ) {
 
             ResultSet resultSet = stmt.executeQuery();
+            listProduct = new HashSet<>();
 
             while (resultSet.next()){
                 Product product = new Product();

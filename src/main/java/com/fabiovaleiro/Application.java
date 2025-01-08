@@ -9,6 +9,7 @@ import com.fabiovaleiro.response.Response;
 import com.fabiovaleiro.service.ProductService;
 import javax.swing.*;
 import java.time.LocalDateTime;
+import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
 
@@ -40,15 +41,27 @@ public class Application {
             opcao = scanner.nextInt();
             scanner.nextLine(); // Limpar o buffer do scanner
 
+
             switch (opcao) {
                 case 1:
 
                     Response<Set<Product>> resposta = proxyProductController.getProducts();
                     listaProduct = resposta.getData();
 
-                    for (Product product1 : listaProduct){
-                        System.out.println(product1);
+                    if (resposta.getError() != null){
+
+                        switch (resposta.getError().getStatusCode()){
+                            case 500:
+                                System.out.println("Caro usuario, problema interno, por favor tente novamente mais tarde");
+                                break;
+                        }
+                    }else{
+                        for (Product product1 : listaProduct){
+                            System.out.println(product1);
+                        }
                     }
+
+
 
                     break;
                 case 2:
@@ -58,7 +71,18 @@ public class Application {
                     Response<Product> resposta2 = proxyProductController.getProductById(id);
                     product = resposta2.getData();
 
-                    System.out.println(product);
+                    if (resposta2.getError() != null){
+
+                        switch (resposta2.getError().getStatusCode()){
+                            case 500:
+                                System.out.println("Caro usuario, problema interno, por favor tente novamente mais tarde");
+                                break;
+                        }
+                    }else {
+                        System.out.println(product);
+                    }
+
+
 
                     break;
                 case 3:
@@ -103,18 +127,38 @@ public class Application {
                         product.setProductDescription(proxyProductController.getProductById(id4).getData().getProductDescription());
                         product.setProductImage(proxyProductController.getProductById(id4).getData().getProductImage());
                         product.setCreationDate(proxyProductController.getProductById(id4).getData().getCreationDate());
-
                         product.setProductName("produto foi atualizado");
 
-                        proxyProductController.updateProduct(product); //aqui atualiza o produto
-                        System.out.println("Produto atualizado");
-                        System.out.println(proxyProductController.getProductById(id4).getData());
+                        Response<Void> resposta4 = proxyProductController.updateProduct(product);  //aqui atualiza o produto
+                        if (resposta4.getError() != null){
+
+                            switch (resposta4.getError().getStatusCode()){
+                                case 500:
+                                    System.out.println("Caro usuario, problema interno, por favor tente novamente mais tarde");
+                                    break;
+                            }
+                        }else {
+                            System.out.println("Produto atualizado");
+                            System.out.println(proxyProductController.getProductById(id4).getData());
+                        }
+
+
+
+
+
 
                     break;
                 case 5:
                     int id5 = Integer.parseInt(JOptionPane.showInputDialog("Qual é o ID do produto que deseja remover?"));
-                    proxyProductController.deleteProduct(id5);
+                    Response<Void> resposta5 =proxyProductController.deleteProduct(id5);
+                    if (resposta5.getError() != null){
 
+                        switch (resposta5.getError().getStatusCode()){
+                            case 500:
+                                System.out.println("Caro usuario, problema interno, por favor tente novamente mais tarde");
+                                break;
+                        }
+                    }
                     break;
                 case 6:
                     System.out.println("Saindo do programa...");
