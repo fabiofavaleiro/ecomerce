@@ -1,0 +1,123 @@
+package com.fabiovaleiro.entity;
+
+import java.time.LocalDateTime;
+import java.util.Objects;
+
+public class Product{
+
+
+
+    private int id;
+    private int companyId;
+    private int codeId;
+    private String productName;
+    private double value;
+    private String productType;
+    private String productDescription;
+    private String productImage;
+    private LocalDateTime creationDate;
+
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getCompanyId() {
+        return companyId;
+    }
+
+    public void setCompanyId(int companyId) {
+        this.companyId = companyId;
+    }
+
+    public int getCodeId() {
+        return codeId;
+    }
+
+    public void setCodeId(int codeId) {
+        this.codeId = codeId;
+    }
+
+    public String getProductName() {
+        return productName;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
+
+    public double getValue() {
+        return value;
+    }
+
+    public void setValue(double value) {
+        this.value = value;
+    }
+
+    public String getProductType() {
+        return productType;
+    }
+
+    public void setProductType(String productType) {
+        this.productType = productType;
+    }
+
+    public String getProductDescription() {
+        return productDescription;
+    }
+
+    public void setProductDescription(String productDescription) {
+        this.productDescription = productDescription;
+    }
+
+    public String getProductImage() {
+        return productImage;
+    }
+
+    public void setProductImage(String productImage) {
+        this.productImage = productImage;
+    }
+
+    public LocalDateTime getCreationDate() {
+        return creationDate;
+    }
+
+    public void setCreationDate(LocalDateTime creationDate) {
+        this.creationDate = creationDate;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Product product = (Product) o;
+        return getId() == product.getId() && getCompanyId() == product.getCompanyId() && getCodeId() == product.getCodeId();
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId(), getCompanyId(), getCodeId());
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "id=" + id +
+                ", companyId=" + companyId +
+                ", codeId=" + codeId +
+                ", productName='" + productName + '\'' +
+                ", value=" + value +
+                ", productType='" + productType + '\'' +
+                ", productDescription='" + productDescription + '\'' +
+                ", productImage='" + productImage + '\'' +
+                ", creationDate=" + creationDate +
+                '}';
+    }
+
+
+
+}
